@@ -7,10 +7,8 @@
       "completed": false
     },
     {
-      "id": "2",
-      "title": "Clean the house",
-      "description": "Vacuum, Dust, Mop",
-      "completed": false
+      "completed": true,
+      "id": "2"
     },
     {
       "id": "3",

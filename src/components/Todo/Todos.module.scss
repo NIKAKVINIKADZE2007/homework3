@@ -1,0 +1,36 @@
+@import '../../mixin.scss';
+
+.container {
+  max-width: 736px;
+  width: 100%;
+  height: unset;
+  margin: 0 auto;
+  margin-top: 64px;
+
+  .tasksContainer {
+    width: 100%;
+    height: 19px;
+    margin-bottom: 24px;
+    @include flex;
+
+    .tasksCreatedDiv {
+      width: 130px;
+      @include flex-space(space-evenly);
+      .tasksCreated {
+        font-weight: bold;
+        color: #4ea8de;
+        font-size: 14px;
+      }
+
+      .tasksCreatedButton {
+        width: 25px;
+        height: 19px;
+        font-size: 12px;
+        background-color: #333333;
+        border-radius: 999px;
+        border: none;
+        color: #d9d9d9;
+      }
+    }
+  }
+}
