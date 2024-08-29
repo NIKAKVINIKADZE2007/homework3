@@ -17,13 +17,7 @@ const Todos = () => {
           </div>
           <div className={style.tasksCompletedDiv}>
             completed
-            <button
-              className={
-                items.filter((item) => item.completed).length > 0
-                  ? style.tasksCreatedWriten
-                  : style.tasksCreatedButton
-              }
-            >
+            <button>
               {items.filter((item) => item.completed).length == 0
                 ? '0'
                 : `${items.filter((item) => item.completed).length} of ${
