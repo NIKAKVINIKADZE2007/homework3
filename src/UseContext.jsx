@@ -20,6 +20,7 @@ export const AmmountProvider = ({ children }) => {
     }
   };
 
+  //gamodzaxeba
   useEffect(() => {
     fetchData();
   }, []);

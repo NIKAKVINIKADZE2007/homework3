@@ -5,7 +5,7 @@ import Notodos from './Notodos';
 import style from './Todos.module.scss';
 const Todos = () => {
   const { items, loading } = useContext(AmmountContext);
-  const complited = items.filter((item) => item.completed).length;
+
   if (loading) return <div>loading...</div>;
   else
     return (
@@ -15,8 +15,21 @@ const Todos = () => {
             <p className={style.tasksCreated}>Tasks created</p>
             <button className={style.tasksCreatedButton}>{items.length}</button>
           </div>
-          <div>
-            {items.length == 0 ? '0' : `${complited} of ${items.length}`}
+          <div className={style.tasksCompletedDiv}>
+            completed
+            <button
+              className={
+                items.filter((item) => item.completed).length > 0
+                  ? style.tasksCreatedWriten
+                  : style.tasksCreatedButton
+              }
+            >
+              {items.filter((item) => item.completed).length == 0
+                ? '0'
+                : `${items.filter((item) => item.completed).length} of ${
+                    items.length
+                  }`}
+            </button>
           </div>
         </div>
         <div>{items.length > 0 ? <Todo /> : <Notodos />}</div>

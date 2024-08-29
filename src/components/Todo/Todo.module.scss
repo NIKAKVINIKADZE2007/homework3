@@ -11,13 +11,26 @@ ul {
     border: 1px solid #333333;
     border-radius: 8px;
     @include flex-space(space-around);
+
+    .checkNotSelected {
+      width: 17.45px;
+      height: 17.45px;
+      background-color: blue;
+      border: 1px solid #4ea8de;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: #808080;
+    }
+
+    .deleteButton {
+      background-color: transparent;
+      border: none;
+    }
   }
 
   li:not(:last-child) {
     margin-bottom: 12px;
   }
-}
-
-.complited {
-  text-decoration: line-through;
 }

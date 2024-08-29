@@ -32,5 +32,35 @@
         color: #d9d9d9;
       }
     }
+
+    .tasksCompletedDiv {
+      color: rgba(130, 132, 250, 1);
+      font-size: 14px;
+      font-weight: bold;
+
+      .tasksCreatedButton {
+        width: 25px;
+        height: 19px;
+        font-size: 12px;
+        background-color: #333333;
+        border-radius: 999px;
+        border: none;
+        color: #d9d9d9;
+        margin-left: 8px;
+        font-weight: bold;
+      }
+
+      .tasksCreatedWriten {
+        width: 49px !important;
+        height: 19px;
+        font-size: 12px;
+        background-color: #333333;
+        border-radius: 999px;
+        border: none;
+        color: #d9d9d9;
+        margin-left: 8px;
+        font-weight: bold;
+      }
+    }
   }
 }

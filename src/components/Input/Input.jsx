@@ -7,14 +7,15 @@ const Input = () => {
   const { items, setError, setItems } = useContext(AmmountContext);
   const [Tododes, setTododes] = useState('');
 
-  //Post request
+  //damateba
   const addTodo = async (Todo) => {
     const url = 'http://localhost:3500/tasks';
-
+    console.log(Todo);
     const option = {
       method: 'POST',
       body: JSON.stringify({
-        id: items.length + 1,
+        //ro vpostavdi da vshlidi id meordeboda xolme amitom cota meti mivumate
+        id: (items.length + 10).toString(),
         title: 'new Todo',
         description: Todo,
         completed: false,
@@ -31,6 +32,7 @@ const Input = () => {
       setItems((prev) => [...prev, data]);
     }
   };
+
   return (
     <div className={style.container}>
       <input
@@ -41,7 +43,7 @@ const Input = () => {
       />
       <button
         onClick={() => {
-          addTodo(Tododes);
+          Tododes.trim() ? addTodo(Tododes) : console.log('add Todo');
         }}
         className={style.addBtn}
       >
