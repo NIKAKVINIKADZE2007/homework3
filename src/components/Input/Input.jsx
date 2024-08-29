@@ -10,7 +10,7 @@ const Input = () => {
   //damateba
   const addTodo = async (Todo) => {
     const url = 'http://localhost:3500/tasks';
-    console.log(Todo);
+
     const option = {
       method: 'POST',
       body: JSON.stringify({

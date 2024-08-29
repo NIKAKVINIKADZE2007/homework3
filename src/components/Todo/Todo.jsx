@@ -19,7 +19,6 @@ const Todo = () => {
     };
 
     const data = await apiRequest(url, options);
-    console.log(data);
 
     if (data.error) {
       setError(data.error);
