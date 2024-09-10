@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import Input from './components/Input/Input';
 import Todos from './components/Todo/Todos';
 
-import styles from './App.module.scss';
+import './App.css';
 import './mixin.scss';
 
 function App() {
